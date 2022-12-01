@@ -536,6 +536,47 @@ footer {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.signin {
+  display: inline-flex;
+  gap: 12px;
+}
+.newsleter-email {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+.newsleter-email:focus {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: 0;
+  border: 1px solid var(--main-color);
+}
+.newsleter-button {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--second-color);
+  font-size: 16px;
+}
+.send-icon {
+  position: absolute;
+  left: 148px;
+  fill: var(--second-color);
+}
 /* ==== END FOOTER === */
 
 .first-btn {
@@ -717,9 +758,17 @@ figure > .project-images {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background-color: white;
+  background-color: var(--second-color);
   box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
     0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px;
+  color: rgba(117, 117, 117, 1);
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 .close-btn {
@@ -728,7 +777,7 @@ figure > .project-images {
   top: 9px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: var(--second-color);
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -746,4 +795,116 @@ figure > .project-images {
   height: 100%;
   pointer-events: none;
   transform: scaleY(0);
+}
+.form-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(33, 33, 33, 1);
+  margin-bottom: 12px;
+}
+.label {
+  display: block;
+  position: relative;
+  color: rgba(117, 117, 117, 1);
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.2;
+}
+.form-input-name,
+.form-input-phone,
+.form-input-email {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-left: 42px;
+}
+.form-input-name:focus,
+.form-input-phone:focus,
+.form-input-email:focus {
+  outline-color: var(--main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon-person,
+.form-icon-phone,
+.form-icon-email {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  fill: var(--brand-color);
+  width: 18px;
+  height: 18px;
+}
+.form-icon-person:hover svg {
+  fill: var(--blue);
+}
+.form-input-name:focus + .form-icon-person,
+.form-input-phone:focus + .form-icon-phone,
+.form-input-email:focus + .form-icon-email {
+  fill: var(--main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.textarea {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  color: rgba(117, 117, 117, 0.5);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
+  letter-spacing: 1%;
+  resize: none;
+  margin-bottom: 20px;
+}
+.textarea:focus {
+  outline-color: var(--main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox {
+  display: none;
+}
+.checkbox-label:has(.checkbox:checked) .check {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+.check {
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.checkbox-span {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-size: 14px;
+  color: var(--description-color);
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox-agree a {
+  color: var(--main-color);
+}
+.send-form {
+  width: 200px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 30px;
+  border: 0;
+  cursor: pointer;
 }
